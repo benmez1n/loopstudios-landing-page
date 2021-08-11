@@ -1,0 +1,149 @@
+:root{
+    --dark-gray:hsl(0, 0%, 55%);
+    --very-dark-gray:hsl(0, 0%, 41%);
+}
+*{box-sizing: border-box;}
+ul{list-style: none;padding-inline-start: 0;}
+p{font-size: 15px;color: var(--very-dark-gray);line-height: 1.5;}
+a{color:white;text-decoration: none;}
+.container{width:1170px;margin:0 auto;font-family: "Alata"}
+/*Header*/
+header{
+    background-image: url('../images/desktop/image-hero.jpg');
+    background-size: cover;
+    color:white;
+    height: 640px;
+}
+nav{
+    padding-top:20px;
+    margin-bottom:50px;
+    display: flex;
+    position:relative;
+    justify-content: space-between;
+}
+nav ul{
+    width:120px;
+    margin-top:40px;
+    background-color:black;
+    padding:10px;
+    visibility: hidden;
+    border-radius: 5px;
+    box-shadow:  5px 5px 28px black,
+             -5px -5px 28px black;
+}
+nav i{
+    color:white;
+    float:right;
+    cursor:pointer;
+}
+nav i:hover{
+    transition:all ease 2s;
+    color:black;
+}
+#down{display: none;}
+nav li{display:block;padding:0 0 10px 10px;}
+nav li:not(:last-of-type){
+    margin-bottom:5px;
+    border-bottom:1px solid white;
+}
+nav li:hover{padding-left:30px}
+.list-visibility{visibility: visible;}
+nav img{height: 100%;margin-top:10px}
+header .container>div{
+    height: 230px;
+    width: 550px;
+    font-family: "Josefin Sans";
+    font-weight: 50;
+    text-transform: uppercase;
+    font-size: 60px;
+    letter-spacing: 3px;
+    border:2px solid white;
+    padding:20px;
+}
+/*.......*/
+/*Main*/
+main{background-color: white;}
+/*intro*/
+#intro{
+    margin-top:100px;
+    width:700px;
+    height: 500px;
+    margin-bottom:120px;
+    background-image: url(../images/desktop/image-interactive.jpg);
+    position: relative;
+}
+#intro-content{
+    width:550px;
+    height: max-content;
+    position: absolute;
+    top:35%;
+    left:80%;
+    background-color: white;
+    padding:70px;
+}
+main h1{
+    text-transform: uppercase;
+    font-family: "Josefin Sans";
+    letter-spacing: 3px;
+    font-weight: 300;
+}
+#title{display:flex;justify-content: space-between;}
+#title h1{margin-top:0}
+#title button{
+    width:150px;
+    height:35px;
+    text-transform: uppercase;
+    cursor:pointer;
+    letter-spacing: 2px;
+    border:1px black solid;
+    background-color: white;
+}
+#title button:hover{
+    background-color: black;
+    color:white;
+}
+#creations{
+    display: grid;
+    grid-template-columns: repeat(4,auto);
+    row-gap: 40px;
+    color:white;
+}
+#creations div{
+    width:256px;
+    height: 450px;
+    cursor: pointer;
+    position:relative;
+    overflow: hidden;
+}
+#creations div:hover::after{
+    content: "";
+    position: absolute;
+    width:100%;
+    height: 100%;
+    animation: creations 0.3s;
+    top:0;
+    left:0;
+    background-color: rgba(255,255,255,.7);
+    opacity:0.2
+}
+#creations h1{margin:330px 0 0 40px;font-weight: bold;}
+
+/**............*/
+/*footer*/
+footer{background-color: black;color:white;margin-top:150px;padding:70px 0;}
+footer li{display:inline-block;cursor: pointer;}
+footer .container>img{margin-top:10px;}
+footer li:hover{transition: all ease-in 3s;border-bottom:2px solid white;}
+footer ul:first-of-type :not(:last-child){margin-right:10px}
+footer ul:last-of-type :not(:last-child){margin-right:30px}
+footer .container{
+    display:grid;
+    grid-template-columns: 75% 25%;
+}
+@keyframes creations {
+    0%   {top:99%;left:99%}
+    25%  {top:75%;left:75%}
+    50%  {top:50%;left:50%}
+    75%  {top:25%;left:25%}
+    100% {top:0;left:0}
+  }
