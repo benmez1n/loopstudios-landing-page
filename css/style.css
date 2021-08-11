@@ -146,4 +146,12 @@ footer .container{
     50%  {top:50%;left:50%}
     75%  {top:25%;left:25%}
     100% {top:0;left:0}
-  }
+}
+@font-face {
+    font-family: Alata;
+    src: url(../fonts/Alata-Regular.ttf);
+}
+@font-face {
+    font-family: "Josefin Sans";
+    src: url(../fonts/JosefinSans-Light.ttf);
+}
